@@ -1,0 +1,82 @@
+[
+  {
+    "ID": 1,
+    "Nume": "CLIENT",
+    "Prenume": "1",
+    "Nr.Telefon": "0770 420 690",
+    "Oras": "ORAS",
+    "Pariah": true
+  },
+  {
+    "ID": 2,
+    "Nume": "CLIENT",
+    "Prenume": "2",
+    "Nr.Telefon": "0770 420 690",
+    "Oras": "ORAS",
+    "Pariah": true
+  },
+  {
+    "ID": 3,
+    "Nume": "CLIENT",
+    "Prenume": "3",
+    "Nr.Telefon": "0770 420 690",
+    "Oras": "ORAS",
+    "Pariah": true
+  },
+  {
+    "ID": 4,
+    "Nume": "CLIENT",
+    "Prenume": "4",
+    "Nr.Telefon": "0770 420 690",
+    "Oras": "ORAS",
+    "Pariah": true
+  },
+  {
+    "ID": 5,
+    "Nume": "CLIENT",
+    "Prenume": "5",
+    "Nr.Telefon": "0770 420 690",
+    "Oras": "ORAS",
+    "Pariah": true
+  },
+  {
+    "ID": 6,
+    "Nume": "CLIENT",
+    "Prenume": "6",
+    "Nr.Telefon": "0770 420 690",
+    "Oras": "ORAS",
+    "Pariah": true
+  },
+  {
+    "ID": 7,
+    "Nume": "CLIENT",
+    "Prenume": "7",
+    "Nr.Telefon": "0770 420 690",
+    "Oras": "ORAS",
+    "Pariah": true
+  },
+  {
+    "ID": 8,
+    "Nume": "CLIENT",
+    "Prenume": "8",
+    "Nr.Telefon": "0770 420 690",
+    "Oras": "ORAS",
+    "Pariah": true
+  },
+  {
+    "ID": 9,
+    "Nume": "CLIENT",
+    "Prenume": "9",
+    "Nr.Telefon": "0770 420 690",
+    "Oras": "ORAS",
+    "Pariah": true
+  },
+  {
+    "ID": 10,
+    "Nume": "CLIENT",
+    "Prenume": "10",
+    "Nr.Telefon": "0770 420 690",
+    "Oras": "ORAS",
+    "Pariah": true
+  }
+]
