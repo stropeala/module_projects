@@ -1,22 +1,25 @@
 import datetime
 import time
-from random import randint
 
 
-def countdown_draft():
-    start_s = str(datetime.datetime.now())
-    start = {"Intrare in parcare": str(datetime.datetime.now())}
+def countdown(t):
+    start = str(datetime.datetime.now())
+    intrare = {"Intrare in parcare": start}
 
-    t = randint(0, 2)
+    timp = intrare
+
+    print(timp)
+
     while t:
+        mins, secs = divmod(t, 60)
+        timer = "{:02d}:{:02d}".format(mins, secs)
+        print({"Timp": timer}, end="\r")  # Overwrite the line each second
         time.sleep(1)
         t -= 1
 
-    end_s = str(datetime.datetime.now())
-    end = {"Parcarea a expirat": str(datetime.datetime.now())}
+    end = str(datetime.datetime.now())
+    expirare = {"Parcarea a expirat": end}
 
-    timp = start | end
+    timp = expirare
 
-    print(type(end_s))
     print(timp)
-    print(eval(f"{end_s} - {start_s}"))
