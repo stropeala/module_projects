@@ -18,6 +18,9 @@ Pentru a fi mai usor de aplicat si de inteles singurele modificari pe care le am
     clientii care au depasit 7 secunde a.k.a. "3 zile" li se va schimba pariah din False in True
 
 In rest totul este exact ca si in cerinta de la proiect (sper)
+Avem deja 10 clienti gata sortati, daca dam run la main, acest va mai adauga 10 si ii va sorta
+La final vom avea 20 de clienti toti dortati frumos la locul lor
+
 Am incercat sa explic cat mai bine tot ce am facut
 Sper ca o sa intelegeti, nu sunt cel mai bun la limba romana :)
 

@@ -61,3 +61,19 @@ def clients(filepath, nume, prenume, telefon, oras, pariah=False):
     with open(filepath, "w") as file:
         # indent=4 for better format
         json.dump(all_clients, file, indent=4)
+
+    # We make a json with only the people with pariah true
+    db_filepath3 = f"{pathlib.Path(filepath).parent.resolve()}/clients_pariah_true.json"
+    with open(filepath, "r") as file:
+        client_db3 = json.load(file)
+
+    # We make a for loop that checks only the dicts with pariah true and adds them to an empty list
+    pariah_clients = []
+    for client in client_db3:
+        if client["Pariah"] == "true":
+            pariah_clients.append(client)
+
+    # We write the json
+    with open(db_filepath3, "w") as file:
+        # indent=4 for better format
+        json.dump(pariah_clients, file, indent=4)
