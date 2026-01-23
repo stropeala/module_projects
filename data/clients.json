@@ -13,7 +13,7 @@
     "Prenume": "Wood",
     "Nr.Telefon": "(475) 651-6147",
     "Oras": "Bridgeport, CT",
-    "Pariah": true
+    "Pariah": false
   },
   {
     "ID": 3,
@@ -29,7 +29,7 @@
     "Prenume": "Forbes",
     "Nr.Telefon": "(570) 542-1228",
     "Oras": "Scranton, PA",
-    "Pariah": false
+    "Pariah": true
   },
   {
     "ID": 5,
@@ -53,7 +53,7 @@
     "Prenume": "Snyder",
     "Nr.Telefon": "(502) 947-8597",
     "Oras": "Louisville, KY",
-    "Pariah": true
+    "Pariah": false
   },
   {
     "ID": 8,
@@ -61,7 +61,7 @@
     "Prenume": "Garcia",
     "Nr.Telefon": "(270) 921-6744",
     "Oras": "Henderson, KY",
-    "Pariah": false
+    "Pariah": true
   },
   {
     "ID": 9,
