@@ -1,50 +1,50 @@
 [
-    {
-        "ID": 728113,
-        "Nume": "salut",
-        "Prenume": "sunt",
-        "Nr.Telefon": "un",
-        "Oras": "test",
-        "Pariah": false
-    },
-    {
-        "ID": 815870,
-        "Nume": "salut",
-        "Prenume": "sunt",
-        "Nr.Telefon": "al treilea",
-        "Oras": "test",
-        "Pariah": false
-    },
-    {
-        "ID": 711813,
-        "Nume": "salut",
-        "Prenume": "sunt",
-        "Nr.Telefon": "un",
-        "Oras": "test",
-        "Pariah": false
-    },
-    {
-        "ID": 931192,
-        "Nume": "salut",
-        "Prenume": "sunt",
-        "Nr.Telefon": "al treilea",
-        "Oras": "test",
-        "Pariah": false
-    },
-    {
-        "ID": 442288,
-        "Nume": "salut",
-        "Prenume": "sunt",
-        "Nr.Telefon": "un",
-        "Oras": "test",
-        "Pariah": false
-    },
-    {
-        "ID": 655747,
-        "Nume": "salut",
-        "Prenume": "sunt",
-        "Nr.Telefon": "al treilea",
-        "Oras": "test",
-        "Pariah": false
-    }
+  {
+    "ID": 728113,
+    "Nume": "salut",
+    "Prenume": "sunt",
+    "Nr.Telefon": "un",
+    "Oras": "test",
+    "Pariah": false
+  },
+  {
+    "ID": 815870,
+    "Nume": "salut",
+    "Prenume": "sunt",
+    "Nr.Telefon": "al treilea",
+    "Oras": "test",
+    "Pariah": false
+  },
+  {
+    "ID": 711813,
+    "Nume": "salut",
+    "Prenume": "sunt",
+    "Nr.Telefon": "un",
+    "Oras": "test",
+    "Pariah": false
+  },
+  {
+    "ID": 931192,
+    "Nume": "salut",
+    "Prenume": "sunt",
+    "Nr.Telefon": "al treilea",
+    "Oras": "test",
+    "Pariah": false
+  },
+  {
+    "ID": 442288,
+    "Nume": "salut",
+    "Prenume": "sunt",
+    "Nr.Telefon": "un",
+    "Oras": "test",
+    "Pariah": false
+  },
+  {
+    "ID": 655747,
+    "Nume": "salut",
+    "Prenume": "sunt",
+    "Nr.Telefon": "al treilea",
+    "Oras": "test",
+    "Pariah": false
+  }
 ]
