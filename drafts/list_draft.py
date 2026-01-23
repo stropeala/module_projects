@@ -1,16 +1,18 @@
-import random
-
-# list = [
-#     {"ID": 1, "Date & Hour": {"Intrare in parcare": "2026-01-22 21:59:38.491450"}},
-#     {"ID": 2, "Date & Hour": {"Intrare in parcare": "2026-01-22 21:59:38.491671"}},
-#     {"ID": 3, "Date & Hour": {"Intrare in parcare": "2026-01-22 21:59:38.491450"}},
-# ]
-# string = str(list)
-
-# print(string)
-# print(string[8])
-# print(string[88])
-# print(string[168])
-
-a = random.choice(list(range(0, 100)))
-print(a)
+list = [
+    {
+        "ID": 4,
+        "Date & Hour": {
+            "Intrare in parcare": "2026-01-23 11:28:46.662708",
+            "Iesire din parcare": "2026-01-23 11:28:56.663409",
+            "Timp": "10 ore",
+        },
+    },
+    {
+        "ID": 8,
+        "Date & Hour": {
+            "Intrare in parcare": "2026-01-23 11:29:06.666875",
+            "Iesire din parcare": "2026-01-23 11:29:14.667477",
+            "Timp": "8 ore",
+        },
+    },
+]
