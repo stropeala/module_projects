@@ -62,6 +62,26 @@ def db_draft(filepath, id):
         with open(db_filepath, "w") as file:
             json.dump(client_db, file, indent=4)
 
+        db_filepath2 = f"{pathlib.Path(filepath).parent.resolve()}/client_timers_draft/client_timers_draft.json"
+        if os.path.isfile(db_filepath2) is True:
+            with open(db_filepath2, "r") as file:
+                client_db2 = json.load(file)
+        else:
+            client_db2 = []
+
+        client_db_dict_start2 = {
+            "ID": id,
+            "Date & Hour": {
+                "Intrare in parcare": str(intrare),
+                "Iesire din parcare": str(iesire),
+                "Timp": f"{ore} ore",
+            },
+        }
+
+        client_db2.append(client_db_dict_start2)
+        with open(db_filepath2, "w") as file:
+            json.dump(client_db2, file, indent=4)
+
     elif 3 < ore < 7:
         db_filepath_2hours = f"{pathlib.Path(filepath).parent.resolve()}/clients_timer_above_2hours_draft.json"
         if os.path.isfile(db_filepath_2hours) is True:
@@ -97,6 +117,26 @@ def db_draft(filepath, id):
         client_db["Date & Hour"]["Timp"] = f"{ore} ore"
         with open(db_filepath, "w") as file:
             json.dump(client_db, file, indent=4)
+
+        db_filepath2 = f"{pathlib.Path(filepath).parent.resolve()}/client_timers_draft/client_timers_draft.json"
+        if os.path.isfile(db_filepath2) is True:
+            with open(db_filepath2, "r") as file:
+                client_db2 = json.load(file)
+        else:
+            client_db2 = []
+
+        client_db_dict_start2 = {
+            "ID": id,
+            "Date & Hour": {
+                "Intrare in parcare": str(intrare),
+                "Iesire din parcare": str(iesire),
+                "Timp": f"{ore} ore",
+            },
+        }
+
+        client_db2.append(client_db_dict_start2)
+        with open(db_filepath2, "w") as file:
+            json.dump(client_db2, file, indent=4)
 
     elif 7 <= ore:
         db_filepath_3days = f"{pathlib.Path(filepath).parent.resolve()}/clients_timer_above_3days_draft.json"
@@ -134,6 +174,26 @@ def db_draft(filepath, id):
         with open(db_filepath, "w") as file:
             json.dump(client_db, file, indent=4)
 
+        db_filepath2 = f"{pathlib.Path(filepath).parent.resolve()}/client_timers_draft/client_timers_draft.json"
+        if os.path.isfile(db_filepath2) is True:
+            with open(db_filepath2, "r") as file:
+                client_db2 = json.load(file)
+        else:
+            client_db2 = []
+
+        client_db_dict_start2 = {
+            "ID": id,
+            "Date & Hour": {
+                "Intrare in parcare": str(intrare),
+                "Iesire din parcare": str(iesire),
+                "Timp": f"{ore} ore",
+            },
+        }
+
+        client_db2.append(client_db_dict_start2)
+        with open(db_filepath2, "w") as file:
+            json.dump(client_db2, file, indent=4)
+
     else:
         db_filepath = f"{pathlib.Path(filepath).parent.resolve()}/client_timers_draft/client_id{id}_timer_draft.json"
         with open(db_filepath, "r") as file:
@@ -144,7 +204,28 @@ def db_draft(filepath, id):
             time.sleep(1)
             t -= 1
 
-        client_db["Date & Hour"]["Iesire din parcare"] = str(datetime.datetime.now())
+        iesire = datetime.datetime.now()
+        client_db["Date & Hour"]["Iesire din parcare"] = str(iesire)
         client_db["Date & Hour"]["Timp"] = f"{ore} ore"
         with open(db_filepath, "w") as file:
             json.dump(client_db, file, indent=4)
+
+        db_filepath2 = f"{pathlib.Path(filepath).parent.resolve()}/client_timers_draft/client_timers_draft.json"
+        if os.path.isfile(db_filepath2) is True:
+            with open(db_filepath2, "r") as file:
+                client_db2 = json.load(file)
+        else:
+            client_db2 = []
+
+        client_db_dict_start2 = {
+            "ID": id,
+            "Date & Hour": {
+                "Intrare in parcare": str(intrare),
+                "Iesire din parcare": str(iesire),
+                "Timp": f"{ore} ore",
+            },
+        }
+
+        client_db2.append(client_db_dict_start2)
+        with open(db_filepath2, "w") as file:
+            json.dump(client_db2, file, indent=4)
