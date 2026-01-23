@@ -51,7 +51,7 @@ def clients(filepath, nume, prenume, telefon, oras, pariah=False):
     ids = list(range(len(all_clients)))
     for i in ids:
         timp_str = client_db2[i]["Date & Hour"]["Timp"]
-        match = re.findall(r"\d", timp_str)
+        match = re.findall(r"\d+", timp_str)
         timp_int = int(match[0])
         if 7 <= timp_int:
             # We update the dict with True
@@ -63,17 +63,16 @@ def clients(filepath, nume, prenume, telefon, oras, pariah=False):
         json.dump(all_clients, file, indent=4)
 
     # We make a json with only the people with pariah true
-    db_filepath3 = f"{pathlib.Path(filepath).parent.resolve()}/clients_pariah_true.json"
-    with open(filepath, "r") as file:
-        client_db3 = json.load(file)
+    pariah_filepath = (
+        f"{pathlib.Path(filepath).parent.resolve()}/clients_pariah_true.json"
+    )
 
-    # We make a for loop that checks only the dicts with pariah true and adds them to an empty list
+    # We make an empty list and add to it only the dicts with pariah true
     pariah_clients = []
-    for client in client_db3:
-        if client["Pariah"] == "true":
+    for client in all_clients:
+        if client.get("Pariah") is True:
             pariah_clients.append(client)
 
     # We write the json
-    with open(db_filepath3, "w") as file:
-        # indent=4 for better format
+    with open(pariah_filepath, "w") as file:
         json.dump(pariah_clients, file, indent=4)
