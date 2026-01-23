@@ -7,7 +7,7 @@ all_clients = [
         "Prenume": "Fleming",
         "Nr.Telefon": "(810) 011-4394",
         "Oras": "Port Huron, MI",
-        "Pariah": "false",
+        "Pariah": "true",
     },
     {
         "ID": 2,
@@ -47,7 +47,7 @@ all_clients = [
         "Prenume": "Holder",
         "Nr.Telefon": "(574) 347-8989",
         "Oras": "Elkhart, IN",
-        "Pariah": "false",
+        "Pariah": "true",
     },
     {
         "ID": 7,
@@ -71,7 +71,7 @@ all_clients = [
         "Prenume": "Maxwell",
         "Nr.Telefon": "(530) 532-3263",
         "Oras": "Davis, CA",
-        "Pariah": "false",
+        "Pariah": "true",
     },
     {
         "ID": 10,
@@ -167,10 +167,15 @@ client_db2 = [
     },
 ]
 
-ids = list(range(len(all_clients)))
-for i in ids:
-    timp_str = client_db2[i]["Date & Hour"]["Timp"]
-    match = re.findall(r"\d", timp_str)
-    timp_int = int(match[0])
-    if 7 <= timp_int:
-        all_clients[i].update({"Pariah": True})
+# ids = list(range(len(all_clients)))
+# for i in ids:
+#     timp_str = client_db2[i]["Date & Hour"]["Timp"]
+#     match = re.findall(r"\d", timp_str)
+#     timp_int = int(match[0])
+#     if 7 <= timp_int:
+#         all_clients[i].update({"Pariah": True})
+
+pariah_clients = []
+for client in all_clients:
+    if client["Pariah"] == "true":
+        pariah_clients.append(client)
