@@ -1,82 +1,162 @@
 [
-  {
-    "ID": 1,
-    "Nume": "Frank",
-    "Prenume": "Fleming",
-    "Nr.Telefon": "(810) 011-4394",
-    "Oras": "Port Huron, MI",
-    "Pariah": false
-  },
-  {
-    "ID": 2,
-    "Nume": "Keith",
-    "Prenume": "Wood",
-    "Nr.Telefon": "(475) 651-6147",
-    "Oras": "Bridgeport, CT",
-    "Pariah": false
-  },
-  {
-    "ID": 3,
-    "Nume": "Marty",
-    "Prenume": "Koch",
-    "Nr.Telefon": "(681) 518-7418",
-    "Oras": "Charleston, WV",
-    "Pariah": false
-  },
-  {
-    "ID": 4,
-    "Nume": "Billie",
-    "Prenume": "Forbes",
-    "Nr.Telefon": "(570) 542-1228",
-    "Oras": "Scranton, PA",
-    "Pariah": true
-  },
-  {
-    "ID": 5,
-    "Nume": "Deloris",
-    "Prenume": "White",
-    "Nr.Telefon": "(386) 167-3182",
-    "Oras": "Palm Coast, FL",
-    "Pariah": false
-  },
-  {
-    "ID": 6,
-    "Nume": "Sherwood",
-    "Prenume": "Holder",
-    "Nr.Telefon": "(574) 347-8989",
-    "Oras": "Elkhart, IN",
-    "Pariah": false
-  },
-  {
-    "ID": 7,
-    "Nume": "Tobias",
-    "Prenume": "Snyder",
-    "Nr.Telefon": "(502) 947-8597",
-    "Oras": "Louisville, KY",
-    "Pariah": false
-  },
-  {
-    "ID": 8,
-    "Nume": "Mattie",
-    "Prenume": "Garcia",
-    "Nr.Telefon": "(270) 921-6744",
-    "Oras": "Henderson, KY",
-    "Pariah": true
-  },
-  {
-    "ID": 9,
-    "Nume": "Hugh",
-    "Prenume": "Maxwell",
-    "Nr.Telefon": "(530) 532-3263",
-    "Oras": "Davis, CA",
-    "Pariah": false
-  },
-  {
-    "ID": 10,
-    "Nume": "Diana",
-    "Prenume": "Acosta",
-    "Nr.Telefon": "(724) 410-6441",
-    "Oras": "Mccandless, PA",
-    "Pariah": false
-  }
+    {
+        "ID": 1,
+        "Nume": "Frank",
+        "Prenume": "Fleming",
+        "Nr.Telefon": "(810) 011-4394",
+        "Oras": "Port Huron, MI",
+        "Pariah": false
+    },
+    {
+        "ID": 2,
+        "Nume": "Keith",
+        "Prenume": "Wood",
+        "Nr.Telefon": "(475) 651-6147",
+        "Oras": "Bridgeport, CT",
+        "Pariah": false
+    },
+    {
+        "ID": 3,
+        "Nume": "Marty",
+        "Prenume": "Koch",
+        "Nr.Telefon": "(681) 518-7418",
+        "Oras": "Charleston, WV",
+        "Pariah": false
+    },
+    {
+        "ID": 4,
+        "Nume": "Billie",
+        "Prenume": "Forbes",
+        "Nr.Telefon": "(570) 542-1228",
+        "Oras": "Scranton, PA",
+        "Pariah": true
+    },
+    {
+        "ID": 5,
+        "Nume": "Deloris",
+        "Prenume": "White",
+        "Nr.Telefon": "(386) 167-3182",
+        "Oras": "Palm Coast, FL",
+        "Pariah": false
+    },
+    {
+        "ID": 6,
+        "Nume": "Sherwood",
+        "Prenume": "Holder",
+        "Nr.Telefon": "(574) 347-8989",
+        "Oras": "Elkhart, IN",
+        "Pariah": false
+    },
+    {
+        "ID": 7,
+        "Nume": "Tobias",
+        "Prenume": "Snyder",
+        "Nr.Telefon": "(502) 947-8597",
+        "Oras": "Louisville, KY",
+        "Pariah": false
+    },
+    {
+        "ID": 8,
+        "Nume": "Mattie",
+        "Prenume": "Garcia",
+        "Nr.Telefon": "(270) 921-6744",
+        "Oras": "Henderson, KY",
+        "Pariah": true
+    },
+    {
+        "ID": 9,
+        "Nume": "Hugh",
+        "Prenume": "Maxwell",
+        "Nr.Telefon": "(530) 532-3263",
+        "Oras": "Davis, CA",
+        "Pariah": false
+    },
+    {
+        "ID": 10,
+        "Nume": "Diana",
+        "Prenume": "Acosta",
+        "Nr.Telefon": "(724) 410-6441",
+        "Oras": "Mccandless, PA",
+        "Pariah": false
+    },
+    {
+        "ID": 11,
+        "Nume": "Lynn",
+        "Prenume": "Newton",
+        "Nr.Telefon": "(206) 342-8631",
+        "Oras": "Seattle, WA",
+        "Pariah": false
+    },
+    {
+        "ID": 12,
+        "Nume": "Genaro",
+        "Prenume": "Willis",
+        "Nr.Telefon": "(717) 550-1675",
+        "Oras": "Harrisburg, PA",
+        "Pariah": true
+    },
+    {
+        "ID": 13,
+        "Nume": "Rosanne",
+        "Prenume": "Maldonado",
+        "Nr.Telefon": "(248) 762-0356",
+        "Oras": "Farmington Hills, MIV",
+        "Pariah": false
+    },
+    {
+        "ID": 14,
+        "Nume": "Pauline",
+        "Prenume": "Figueroa",
+        "Nr.Telefon": "(253) 644-2182",
+        "Oras": "Auburn, WA",
+        "Pariah": false
+    },
+    {
+        "ID": 15,
+        "Nume": "Rickey",
+        "Prenume": "Clements",
+        "Nr.Telefon": "(212) 658-3916",
+        "Oras": "New York City, NY",
+        "Pariah": false
+    },
+    {
+        "ID": 16,
+        "Nume": "Jeanne",
+        "Prenume": "Wolf",
+        "Nr.Telefon": "(209) 300-2557",
+        "Oras": "Ceres, CA",
+        "Pariah": true
+    },
+    {
+        "ID": 17,
+        "Nume": "Dustin",
+        "Prenume": "Carrillo",
+        "Nr.Telefon": "(262) 162-1585",
+        "Oras": "Menomonee Falls, WI",
+        "Pariah": true
+    },
+    {
+        "ID": 18,
+        "Nume": "Sally",
+        "Prenume": "Reeves",
+        "Nr.Telefon": "(252) 258-3799",
+        "Oras": "Greenville, NC",
+        "Pariah": false
+    },
+    {
+        "ID": 19,
+        "Nume": "Jaclyn",
+        "Prenume": "Andersen",
+        "Nr.Telefon": "(234) 109-6666",
+        "Oras": "Akron, OH",
+        "Pariah": false
+    },
+    {
+        "ID": 20,
+        "Nume": "Esteban",
+        "Prenume": "Shelton",
+        "Nr.Telefon": "(201) 874-8593",
+        "Oras": "Bayonne, NJ",
+        "Pariah": false
+    }
 ]
