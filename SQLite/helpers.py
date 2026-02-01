@@ -43,9 +43,10 @@ def get_conn(db_path: str) -> sqlite3.Connection:
     # Then we return the connection so we can use it in other funcs
     if path.isfile(db_path):
         conn = sqlite3.connect(db_path)
+        return conn
     else:
         print("Couldn't connect to database!")
-    return conn  # pyright: ignore
+        return None  # pyright: ignore
 
 
 def write_client(
@@ -81,37 +82,12 @@ def write_client(
 def timer(hours: int) -> str:
     # Here we make a simple timer func
     # that counts every second until 0
-    if 1 <= hours <= 3:
-        t = hours
-        while t:
-            sleep(1)
-            t -= 1
-        exit = str(datetime.now())
-        return exit
-
-    elif 3 < hours < 7:
-        t = hours
-        while t:
-            sleep(1)
-            t -= 1
-        exit = str(datetime.now())
-        return exit
-
-    elif 7 <= hours < 10:
-        t = hours
-        while t:
-            sleep(1)
-            t -= 1
-        exit = str(datetime.now())
-        return exit
-
-    else:
-        t = hours
-        while t:
-            sleep(1)
-            t -= 1
-        exit = str(datetime.now())
-        return exit
+    t = hours
+    while t:
+        sleep(1)
+        t -= 1
+    exit = str(datetime.now())
+    return exit
 
 
 def update_hours_parked(db_path: str, exit: str, hours: int) -> None:
@@ -191,7 +167,7 @@ def create_extra_table(db_path: str) -> None:
         print("Couldn't connect to database!")
 
 
-def read_and_write_extra_tables(db_path: str) -> list:
+def read_and_write_extra_tables(db_path: str) -> None:
     conn = get_conn(db_path)
     if conn:
         cursor = conn.cursor()
@@ -245,4 +221,3 @@ def read_and_write_extra_tables(db_path: str) -> list:
         create_extra_table(db_path)
     else:
         print("Couldn't connect to database!")
-    return []
