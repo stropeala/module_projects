@@ -23,7 +23,7 @@ def create_clients_and_db(
     id = random.randint(1, 65000)
     new_client = f"{id}, {nume}, {prenume}, {telefon}, {oras}, {pariah}\n"
 
-    all_clients = existing_clients + str(new_client)
+    all_clients = existing_clients + new_client
 
     with open(filepath_clients, "w") as file:
         file.write(all_clients)
@@ -53,7 +53,7 @@ def db(filepath_db, id) -> None:
 
     new_client_db = f"{id}, {str(entry)}, {str(exit)}, {str(time)}\n"
 
-    all_clients_db = existing_clients_db + str(new_client_db)
+    all_clients_db = existing_clients_db + new_client_db
 
     with open(filepath_db, "w") as file:
         file.write(all_clients_db)
