@@ -1,0 +1,82 @@
+[
+  {
+    "ID": 1,
+    "Date & Hour": {
+      "Intrare in parcare": "2026-01-23 12:45:46.020244",
+      "Iesire din parcare": "2026-01-23 12:45:47.020413",
+      "Timp": "1 ore"
+    }
+  },
+  {
+    "ID": 2,
+    "Date & Hour": {
+      "Intrare in parcare": "2026-01-23 12:45:47.021103",
+      "Iesire din parcare": "2026-01-23 12:45:55.021700",
+      "Timp": "8 ore"
+    }
+  },
+  {
+    "ID": 3,
+    "Date & Hour": {
+      "Intrare in parcare": "2026-01-23 12:45:55.022361",
+      "Iesire din parcare": "2026-01-23 12:46:04.023045",
+      "Timp": "9 ore"
+    }
+  },
+  {
+    "ID": 4,
+    "Date & Hour": {
+      "Intrare in parcare": "2026-01-23 12:46:04.023747",
+      "Iesire din parcare": "2026-01-23 12:46:05.023909",
+      "Timp": "1 ore"
+    }
+  },
+  {
+    "ID": 5,
+    "Date & Hour": {
+      "Intrare in parcare": "2026-01-23 12:46:05.025444",
+      "Iesire din parcare": "2026-01-23 12:46:10.025836",
+      "Timp": "5 ore"
+    }
+  },
+  {
+    "ID": 6,
+    "Date & Hour": {
+      "Intrare in parcare": "2026-01-23 12:46:10.026525",
+      "Iesire din parcare": "2026-01-23 12:46:16.027032",
+      "Timp": "6 ore"
+    }
+  },
+  {
+    "ID": 7,
+    "Date & Hour": {
+      "Intrare in parcare": "2026-01-23 12:46:16.027751",
+      "Iesire din parcare": "2026-01-23 12:46:19.028040",
+      "Timp": "3 ore"
+    }
+  },
+  {
+    "ID": 8,
+    "Date & Hour": {
+      "Intrare in parcare": "2026-01-23 12:46:19.028848",
+      "Iesire din parcare": "2026-01-23 12:46:24.029240",
+      "Timp": "5 ore"
+    }
+  },
+  {
+    "ID": 9,
+    "Date & Hour": {
+      "Intrare in parcare": "2026-01-23 12:46:24.030000",
+      "Iesire din parcare": "2026-01-23 12:46:30.030473",
+      "Timp": "6 ore"
+    }
+  },
+  {
+    "ID": 10,
+    "Date & Hour": {
+      "Intrare in parcare": "2026-01-23 12:46:30.031242",
+      "Iesire din parcare": "2026-01-23 12:46:38.031837",
+      "Timp": "8 ore"
+    }
+  }
+]

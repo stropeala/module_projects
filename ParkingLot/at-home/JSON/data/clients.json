@@ -1,0 +1,82 @@
+[
+    {
+        "ID": 1,
+        "Nume": "Lynn",
+        "Prenume": "Newton",
+        "Nr.Telefon": "(206) 342-8631",
+        "Oras": "Seattle, WA",
+        "Pariah": false
+    },
+    {
+        "ID": 2,
+        "Nume": "Genaro",
+        "Prenume": "Willis",
+        "Nr.Telefon": "(717) 550-1675",
+        "Oras": "Harrisburg, PA",
+        "Pariah": true
+    },
+    {
+        "ID": 3,
+        "Nume": "Rosanne",
+        "Prenume": "Maldonado",
+        "Nr.Telefon": "(248) 762-0356",
+        "Oras": "Farmington Hills, MIV",
+        "Pariah": false
+    },
+    {
+        "ID": 4,
+        "Nume": "Pauline",
+        "Prenume": "Figueroa",
+        "Nr.Telefon": "(253) 644-2182",
+        "Oras": "Auburn, WA",
+        "Pariah": true
+    },
+    {
+        "ID": 5,
+        "Nume": "Rickey",
+        "Prenume": "Clements",
+        "Nr.Telefon": "(212) 658-3916",
+        "Oras": "New York City, NY",
+        "Pariah": false
+    },
+    {
+        "ID": 6,
+        "Nume": "Jeanne",
+        "Prenume": "Wolf",
+        "Nr.Telefon": "(209) 300-2557",
+        "Oras": "Ceres, CA",
+        "Pariah": true
+    },
+    {
+        "ID": 7,
+        "Nume": "Dustin",
+        "Prenume": "Carrillo",
+        "Nr.Telefon": "(262) 162-1585",
+        "Oras": "Menomonee Falls, WI",
+        "Pariah": true
+    },
+    {
+        "ID": 8,
+        "Nume": "Sally",
+        "Prenume": "Reeves",
+        "Nr.Telefon": "(252) 258-3799",
+        "Oras": "Greenville, NC",
+        "Pariah": false
+    },
+    {
+        "ID": 9,
+        "Nume": "Jaclyn",
+        "Prenume": "Andersen",
+        "Nr.Telefon": "(234) 109-6666",
+        "Oras": "Akron, OH",
+        "Pariah": false
+    },
+    {
+        "ID": 10,
+        "Nume": "Esteban",
+        "Prenume": "Shelton",
+        "Nr.Telefon": "(201) 874-8593",
+        "Oras": "Bayonne, NJ",
+        "Pariah": true
+    }
+]

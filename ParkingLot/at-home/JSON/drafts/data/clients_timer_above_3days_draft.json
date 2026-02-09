@@ -1,0 +1,26 @@
+[
+  {
+    "ID": 2,
+    "Date & Hour": {
+      "Intrare in parcare": "2026-01-23 12:45:47.021103",
+      "Iesire din parcare": "2026-01-23 12:45:55.021700",
+      "Timp": "8 ore"
+    }
+  },
+  {
+    "ID": 3,
+    "Date & Hour": {
+      "Intrare in parcare": "2026-01-23 12:45:55.022361",
+      "Iesire din parcare": "2026-01-23 12:46:04.023045",
+      "Timp": "9 ore"
+    }
+  },
+  {
+    "ID": 10,
+    "Date & Hour": {
+      "Intrare in parcare": "2026-01-23 12:46:30.031242",
+      "Iesire din parcare": "2026-01-23 12:46:38.031837",
+      "Timp": "8 ore"
+    }
+  }
+]
