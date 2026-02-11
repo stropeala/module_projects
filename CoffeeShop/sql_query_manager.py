@@ -11,9 +11,9 @@ MENU_TABLE_COLUMNS = "('name', 'price')"
 ORDERS_TABLE = "Orders"
 ORDERS_TABLE_COLUMNS = "('name', 'qty', 'client_id','timestamp', 'casier_id')"
 
-ADD_EMPLOYEE = """
-INSERT INTO Employee
-('start.date', 'role')
+ADD_EMPLOYEE = f"""
+INSERT INTO {EMPLOYEE_TABLE}
+{EMPLOYEE_TABLE_COLUMNS}
 VALUES
 (?, ?)
 """
