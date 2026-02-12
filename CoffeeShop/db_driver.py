@@ -2,19 +2,17 @@ import os
 import sqlite3
 
 from sql_query_manager import (
-    DRAFT_DB_PATH,
+    EMPLOYEE_STARTDATE_ROLE,
     EMPLOYEE_TABLE,
     EMPLOYEE_TABLE_COLUMNS,
-    EMPLOYEE_VALUES_STARTDATE_ROLE,
+    MENU_NAME_PRICE,
     MENU_TABLE,
     MENU_TABLE_COLUMNS,
-    MENU_VALUES_NAME_PRICE,
+    ORDERS_NAME_QTY_CLIENTID_TIMESTAMP_CASHIERID,
     ORDERS_TABLE,
     ORDERS_TABLE_COLUMNS,
-    ORDERS_VALUES_NAME_QTY_CLIENTID_TIMESTAMP_CASHIERID,
+    TEST_DB_PATH,
 )
-
-db_filepath = DRAFT_DB_PATH
 
 
 def con_to_db(db_filepath: str) -> sqlite3.Connection:
@@ -37,33 +35,35 @@ def read_from_table(db_filepath: str, sql_query: str):
         return cursor.fetchall()
 
 
-def add_to_table(table_name: str, table_columns: str, table_values: str, values: tuple):
+def add_to_table(table_name: str, table_columns: str, table_values: str, input: tuple):
     with con_to_db(db_filepath) as con:
         cursor = con.cursor()
         cursor.execute(
-            f"INSERT INTO {table_name} {table_columns} VALUES {table_values}", values
+            f"INSERT INTO {table_name} {table_columns} VALUES {table_values}", input
         )
         return con.commit()
 
 
 if __name__ == "__main__":
+    db_filepath = TEST_DB_PATH
+
     add_to_table(
         EMPLOYEE_TABLE,
         EMPLOYEE_TABLE_COLUMNS,
-        EMPLOYEE_VALUES_STARTDATE_ROLE,
+        EMPLOYEE_STARTDATE_ROLE,
         ("2025-06-07", "TEST_1"),
     )
 
     add_to_table(
         MENU_TABLE,
         MENU_TABLE_COLUMNS,
-        MENU_VALUES_NAME_PRICE,
+        MENU_NAME_PRICE,
         ("FRIPTURA", "TEST_2"),
     )
 
     add_to_table(
         ORDERS_TABLE,
         ORDERS_TABLE_COLUMNS,
-        ORDERS_VALUES_NAME_QTY_CLIENTID_TIMESTAMP_CASHIERID,
+        ORDERS_NAME_QTY_CLIENTID_TIMESTAMP_CASHIERID,
         ("FRIPTURA", "3", "MARIUSICA BOSSULICA", "2025-06-07 20:45", "TEST_3"),
     )
