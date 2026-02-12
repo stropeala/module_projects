@@ -5,10 +5,13 @@ from sql_query_manager import (
     DRAFT_DB_PATH,
     EMPLOYEE_TABLE,
     EMPLOYEE_TABLE_COLUMNS,
+    EMPLOYEE_VALUES_STARTDATE_ROLE,
     MENU_TABLE,
     MENU_TABLE_COLUMNS,
+    MENU_VALUES_NAME_PRICE,
     ORDERS_TABLE,
     ORDERS_TABLE_COLUMNS,
+    ORDERS_VALUES_NAME_QTY_CLIENTID_TIMESTAMP_CASHIERID,
 )
 
 db_filepath = DRAFT_DB_PATH
@@ -20,7 +23,7 @@ def con_to_db(db_filepath: str) -> sqlite3.Connection:
             con = sqlite3.connect(db_filepath)
             return con
         else:
-            print("Couldn't connect to database!")
+            print("Path is incorrect!")
             return None  # pyright: ignore
     except sqlite3.OperationalError:
         print("Couldn't connect to database!")
@@ -34,22 +37,12 @@ def read_from_table(db_filepath: str, sql_query: str):
         return cursor.fetchall()
 
 
-def add_to_employee(db_filepath: str, sql_query: str, start_date: str, role: str):
+def add_to_table(table_name: str, table_columns: str, table_values: str, values: tuple):
     with con_to_db(db_filepath) as con:
         cursor = con.cursor()
-        cursor.execute(sql_query, (start_date, role))
-        return con.commit()
-
-
-def add_to_table(table_name: str, columns: str, values: str):
-    with con_to_db(db_filepath) as con:
-        cursor = con.cursor()
-        cursor.execute(f"""
-                INSERT INTO {table_name}
-                {columns}
-                VALUES
-                {values}
-        """)
+        cursor.execute(
+            f"INSERT INTO {table_name} {table_columns} VALUES {table_values}", values
+        )
         return con.commit()
 
 
@@ -57,17 +50,20 @@ if __name__ == "__main__":
     add_to_table(
         EMPLOYEE_TABLE,
         EMPLOYEE_TABLE_COLUMNS,
-        "('2025-06-07', 'test_1')",
+        EMPLOYEE_VALUES_STARTDATE_ROLE,
+        ("2025-06-07", "TEST_1"),
     )
 
     add_to_table(
         MENU_TABLE,
         MENU_TABLE_COLUMNS,
-        "('FRIPTURA', 'test_2')",
+        MENU_VALUES_NAME_PRICE,
+        ("FRIPTURA", "TEST_2"),
     )
 
     add_to_table(
         ORDERS_TABLE,
         ORDERS_TABLE_COLUMNS,
-        "('FRIPTURA', '67', 'MARIUSICA BOSSULICA', '2025-06-07', 'test_3')",
+        ORDERS_VALUES_NAME_QTY_CLIENTID_TIMESTAMP_CASHIERID,
+        ("FRIPTURA", "3", "MARIUSICA BOSSULICA", "2025-06-07 20:45", "TEST_3"),
     )
