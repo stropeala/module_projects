@@ -2,12 +2,11 @@ import os
 import sqlite3
 
 from sql_query_manager import (
-    EMPLOYEE_STARTDATE_ROLE,
-    EMPLOYEE_TABLE,
-    EMPLOYEE_TABLE_COLUMNS,
-    MENU_NAME_PRICE,
+    MENU_ESPRESSO_NEW_PRICE,
+    MENU_ESPRESSO_PRICE,
     MENU_TABLE,
-    MENU_TABLE_COLUMNS,
+    ORDERS_GET_QTY_SUM_GROUP,
+    ORDERS_GET_QTY_SUM_SELECT,
     ORDERS_NAME_QTY_CLIENTID_TIMESTAMP_CASHIERID,
     ORDERS_TABLE,
     ORDERS_TABLE_COLUMNS,
@@ -28,42 +27,57 @@ def con_to_db(db_filepath: str) -> sqlite3.Connection:
         return None  # pyright: ignore
 
 
-def read_from_table(db_filepath: str, sql_query: str):
-    with con_to_db(db_filepath) as con:
-        cursor = con.cursor()
-        cursor.execute(sql_query)
-        return cursor.fetchall()
-
-
+# Crud
 def add_to_table(table_name: str, table_columns: str, table_values: str, input: tuple):
     with con_to_db(db_filepath) as con:
         cursor = con.cursor()
         cursor.execute(
-            f"INSERT INTO {table_name} {table_columns} VALUES {table_values}", input
+            f"INSERT INTO {table_name} {table_columns} VALUES {table_values};", input
         )
         return con.commit()
+
+
+# cRud
+def read_from_table(table_select: str, table_name: str, table_read_query: str):
+    with con_to_db(db_filepath) as con:
+        cursor = con.cursor()
+        cursor.execute(f"SELECT {table_select} FROM {table_name} {table_read_query};")
+        return cursor.fetchall()
+
+
+# crUd
+def update_table(table_name: str, update: str, where_to_update: str):
+    with con_to_db(db_filepath) as con:
+        cursor = con.cursor()
+        cursor.execute(f"UPDATE {table_name} SET {update} WHERE {where_to_update};")
+        return con.commit()
+
+
+# cruD
+def delete_from_table():
+    pass
 
 
 if __name__ == "__main__":
     db_filepath = TEST_DB_PATH
 
-    add_to_table(
-        EMPLOYEE_TABLE,
-        EMPLOYEE_TABLE_COLUMNS,
-        EMPLOYEE_STARTDATE_ROLE,
-        ("2025-06-07", "TEST_1"),
-    )
-
-    add_to_table(
-        MENU_TABLE,
-        MENU_TABLE_COLUMNS,
-        MENU_NAME_PRICE,
-        ("FRIPTURA", "TEST_2"),
+    print(
+        read_from_table(
+            ORDERS_GET_QTY_SUM_SELECT,
+            ORDERS_TABLE,
+            ORDERS_GET_QTY_SUM_GROUP,
+        )
     )
 
     add_to_table(
         ORDERS_TABLE,
         ORDERS_TABLE_COLUMNS,
         ORDERS_NAME_QTY_CLIENTID_TIMESTAMP_CASHIERID,
-        ("FRIPTURA", "3", "MARIUSICA BOSSULICA", "2025-06-07 20:45", "TEST_3"),
+        ("FRIPTURA", "3", "MARIUSICA BOSSULICA", "2025-06-07 20:45", "TEST"),
+    )
+
+    update_table(
+        MENU_TABLE,
+        MENU_ESPRESSO_NEW_PRICE,
+        MENU_ESPRESSO_PRICE,
     )
