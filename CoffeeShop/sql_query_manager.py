@@ -14,8 +14,10 @@ ORDERS_TABLE = "Orders"
 ORDERS_TABLE_COLUMNS = "('name', 'qty', 'client_id','timestamp', 'casier_id')"
 ORDERS_NAME_QTY_CLIENTID_TIMESTAMP_CASHIERID = "(?, ?, ?, ?, ?)"
 
-ORDERS_GET_QTY_SUM_SELECT = "client_id, SUM(qty)"
-ORDERS_GET_QTY_SUM_GROUP = "GROUP by client_id"
+MARIUSICA_ORDER = ("FRIPTURA", "3", "MARIUSICA BOSSULICA", "2025-06-07 20:45", "TEST")
+
+ORDERS_GET_QTY_SUM = "client_id, SUM(qty)"
+ORDERS_GET_QTY_SUM_GROUPED = "GROUP by client_id"
 
 MENU_ESPRESSO_PRICE = "name='Espresso' AND price='10,99'"
 MENU_ESPRESSO_NEW_PRICE = "price='12,99'"
