@@ -2,11 +2,12 @@ import os
 import sqlite3
 
 from sql_query_manager import (
+    MARIUSICA_ORDER,
     MENU_ESPRESSO_NEW_PRICE,
     MENU_ESPRESSO_PRICE,
     MENU_TABLE,
-    ORDERS_GET_QTY_SUM_GROUP,
-    ORDERS_GET_QTY_SUM_SELECT,
+    ORDERS_GET_QTY_SUM,
+    ORDERS_GET_QTY_SUM_GROUPED,
     ORDERS_NAME_QTY_CLIENTID_TIMESTAMP_CASHIERID,
     ORDERS_TABLE,
     ORDERS_TABLE_COLUMNS,
@@ -14,6 +15,7 @@ from sql_query_manager import (
 )
 
 
+# Connection
 def con_to_db(db_filepath: str) -> sqlite3.Connection:
     try:
         if os.path.isfile(db_filepath):
@@ -38,15 +40,15 @@ def add_to_table(table_name: str, table_columns: str, table_values: str, input: 
 
 
 # cRud
-def read_from_table(table_select: str, table_name: str, table_read_query: str):
+def read_from_table(table_name: str, what_to_read: str, table_read_query: str):
     with con_to_db(db_filepath) as con:
         cursor = con.cursor()
-        cursor.execute(f"SELECT {table_select} FROM {table_name} {table_read_query};")
+        cursor.execute(f"SELECT {what_to_read} FROM {table_name} {table_read_query};")
         return cursor.fetchall()
 
 
 # crUd
-def update_table(table_name: str, update: str, where_to_update: str):
+def update_table(table_name: str, where_to_update: str, update: str):
     with con_to_db(db_filepath) as con:
         cursor = con.cursor()
         cursor.execute(f"UPDATE {table_name} SET {update} WHERE {where_to_update};")
@@ -61,23 +63,23 @@ def delete_from_table() -> None:
 if __name__ == "__main__":
     db_filepath = TEST_DB_PATH
 
-    print(
-        read_from_table(
-            ORDERS_GET_QTY_SUM_SELECT,
-            ORDERS_TABLE,
-            ORDERS_GET_QTY_SUM_GROUP,
-        )
-    )
-
     add_to_table(
         ORDERS_TABLE,
         ORDERS_TABLE_COLUMNS,
         ORDERS_NAME_QTY_CLIENTID_TIMESTAMP_CASHIERID,
-        ("FRIPTURA", "3", "MARIUSICA BOSSULICA", "2025-06-07 20:45", "TEST"),
+        MARIUSICA_ORDER,
+    )
+
+    print(
+        read_from_table(
+            ORDERS_TABLE,
+            ORDERS_GET_QTY_SUM,
+            ORDERS_GET_QTY_SUM_GROUPED,
+        )
     )
 
     update_table(
         MENU_TABLE,
-        MENU_ESPRESSO_NEW_PRICE,
         MENU_ESPRESSO_PRICE,
+        MENU_ESPRESSO_NEW_PRICE,
     )
