@@ -54,7 +54,7 @@ def update_table(table_name: str, update: str, where_to_update: str):
 
 
 # cruD
-def delete_from_table():
+def delete_from_table() -> None:
     pass
 
 
