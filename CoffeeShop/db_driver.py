@@ -2,10 +2,11 @@ import os
 import sqlite3
 
 from sql_query_manager import (
-    MARIUSICA_ORDER,
     MENU_ESPRESSO_NEW_PRICE,
     MENU_ESPRESSO_PRICE,
     MENU_TABLE,
+    ORDER_MARIUSICA,
+    ORDER_MARIUSICA_DELETE,
     ORDERS_GET_QTY_SUM,
     ORDERS_GET_QTY_SUM_GROUPED,
     ORDERS_NAME_QTY_CLIENTID_TIMESTAMP_CASHIERID,
@@ -56,8 +57,10 @@ def update_table(table_name: str, where_to_update: str, update: str):
 
 
 # cruD
-def delete_from_table() -> None:
-    pass
+def delete_from_table(table_name: str, what_to_delete: str) -> None:
+    with con_to_db(db_filepath) as con:
+        cursor = con.cursor()
+        cursor.execute(f"DELETE FROM {table_name} WHERE {what_to_delete}")
 
 
 if __name__ == "__main__":
@@ -67,7 +70,7 @@ if __name__ == "__main__":
         ORDERS_TABLE,
         ORDERS_TABLE_COLUMNS,
         ORDERS_NAME_QTY_CLIENTID_TIMESTAMP_CASHIERID,
-        MARIUSICA_ORDER,
+        ORDER_MARIUSICA,
     )
 
     print(
@@ -82,4 +85,9 @@ if __name__ == "__main__":
         MENU_TABLE,
         MENU_ESPRESSO_PRICE,
         MENU_ESPRESSO_NEW_PRICE,
+    )
+
+    delete_from_table(
+        ORDERS_TABLE,
+        ORDER_MARIUSICA_DELETE,
     )
