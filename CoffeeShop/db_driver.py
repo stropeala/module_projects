@@ -61,6 +61,7 @@ def delete_from_table(table_name: str, what_to_delete: str) -> None:
     with con_to_db(db_filepath) as con:
         cursor = con.cursor()
         cursor.execute(f"DELETE FROM {table_name} WHERE {what_to_delete}")
+        return con.commit()
 
 
 if __name__ == "__main__":
